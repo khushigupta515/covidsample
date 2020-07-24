@@ -24,7 +24,7 @@ div{
  
 .slide-in {
       opacity: 0;
-      transition: all .2s;
+      transition: all .5s;
     }
 .align-left.slide-in{
 	transform: translateX(-50%) scale(0.95);
@@ -38,7 +38,7 @@ div{
 }
 .faded
 { opacity: 1;
-  transition: all .2s;}
+  transition: all .5s;}
 
   .faded.active{
 	opacity: 0;
