@@ -1,0 +1,15 @@
+
+
+
+body
+{font-family: 'Bree Serif', serif;
+font-family: 'Yrsa', serif;
+}
+
+.image1-left img
+{border: 1px solid black;}
+.image2-right img
+{border: 1px solid black;}
+.caption
+{opacity: 1;
+}
