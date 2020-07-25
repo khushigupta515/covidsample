@@ -32,9 +32,11 @@
         //to check if image is scrolled completely
         const isNotScrolledPast = window.scrollY < imageBottom;
         //if image is half shown and not fully scrolled then add class active
-        if (isHalfShown ) {
+        if (isHalfShown && isNotScrolledPast) {
           sliderImage.classList.add('active');
-        } else {
+        } 
+        
+        else {
           sliderImage.classList.remove('active');
         }
 
@@ -43,20 +45,24 @@
   
   }
   window.addEventListener("scroll",debounce(checkSlide));
+
+
+  //fading on scroll
    $(function() {
                 
                 var documentEl = $(document),
+                //gets all elements with the class .fadeonscroll
                     fadeElem = $('.fadeonscroll');
                 
                 
                 documentEl.on('scroll', function() {
                     var currScrollPos = documentEl.scrollTop();
-                    
+                    //iterate through the fadeElem which conatins all elements with the class .fadeonscroll
                     fadeElem.each(function() {
 
                         var $this = $(this),
                             elemOffsetTop = $this.offset().top;
-                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/200);
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/100);
                     }); 
                 });
                 
