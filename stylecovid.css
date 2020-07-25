@@ -19,7 +19,7 @@ div{
 }
  
 .slide-in {
-      opacity: 0.3;
+      opacity: 0.9;
       transition: all .3s;
  }
 .align-left.slide-in{
