@@ -1,6 +1,4 @@
 
-
-
 body
 {font-family: 'Bree Serif', serif;
 
@@ -24,7 +22,7 @@ div{
  
 .slide-in {
       opacity: 0;
-      transition: all .5s;
+      transition: all .8s;
     }
 .align-left.slide-in{
 	transform: translateX(-50%) scale(0.95);
@@ -35,12 +33,4 @@ div{
 .slide-in.active{
 	opacity: 1;
 	transform: translateX(0%) scale(1);
-}
-.faded
-{ opacity: 1;
-  transition: all .5s;}
-
-  .faded.active{
-	opacity: 0;
-	
 }
