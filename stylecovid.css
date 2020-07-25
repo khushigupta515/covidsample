@@ -1,7 +1,7 @@
 body
 {font-family: 'Bree Serif', serif;
- marign:0;
- padding:0;
+margin:0;
+padding: 0; 
 }
 
 .image1-left img
@@ -22,7 +22,7 @@ div{
  
 .slide-in {
       opacity: 1;
-      transition: all .5s;
+      transition: all .4s;
  }
 .align-left.slide-in{
 	transform: translateX(-70%) scale(0.95);
