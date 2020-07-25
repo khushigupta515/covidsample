@@ -25,10 +25,10 @@ div{
       transition: all .5s;
  }
 .align-left.slide-in{
-	transform: translateX(-150%) scale(0.95);
+	transform: translateX(-70%) scale(0.95);
 }
 .align-right.slide-in{
-	transform: translateX(150%) scale(0.95);
+	transform: translateX(70%) scale(0.95);
 }
 .slide-in.active{
 	opacity: 1;
