@@ -1,6 +1,3 @@
-
-
-
 //reduces number of times checkslide function runs 
       function debounce(func, wait = 20, immediate = true) {
       var timeout;
@@ -23,9 +20,9 @@
     function checkSlide() {
     const sliderImages = document.querySelectorAll(".slide-in");
      
-  	/*run a for loop to trace all images in slider Images*/
+    /*run a for loop to trace all images in slider Images*/
       sliderImages.forEach(sliderImage => {
-      	
+        
         // half way through the image scrollY gives the top position till which we have scrolled so we add .innerHeight to reach
         const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
         // bottom of the image .offsetTop tells us how far from the top of the window is the top of the image then add image height to reach bottom of image
@@ -41,8 +38,26 @@
           sliderImage.classList.remove('active');
         }
 
-        const fadedtext=document.querySelectorAll(".faded");
-        console.log(fadedtext);
-        	});
+        
+          });
+  
   }
   window.addEventListener("scroll",debounce(checkSlide));
+   $(function() {
+                
+                var documentEl = $(document),
+                    fadeElem = $('.fadeonscroll');
+                
+                
+                documentEl.on('scroll', function() {
+                    var currScrollPos = documentEl.scrollTop();
+                    
+                    fadeElem.each(function() {
+
+                        var $this = $(this),
+                            elemOffsetTop = $this.offset().top;
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/100);
+                    }); 
+                });
+                
+            });
