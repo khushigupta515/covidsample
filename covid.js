@@ -32,7 +32,7 @@
         //to check if image is scrolled completely
         const isNotScrolledPast = window.scrollY < imageBottom;
         //if image is half shown and not fully scrolled then add class active
-        if (isHalfShown && isNotScrolledPast) {
+        if (isHalfShown ) {
           sliderImage.classList.add('active');
         } else {
           sliderImage.classList.remove('active');
