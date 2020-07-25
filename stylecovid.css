@@ -21,8 +21,8 @@ div{
 }
  
 .slide-in {
-      opacity: 0;
-      transition: all .8s;
+      opacity: 0.3;
+      transition: all .5s;
     }
 .align-left.slide-in{
 	transform: translateX(-50%) scale(0.95);
