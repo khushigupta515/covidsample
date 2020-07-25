@@ -35,9 +35,9 @@
         if (isHalfShown && isNotScrolledPast) {
           sliderImage.classList.add('active');
         } 
-        
         else {
           sliderImage.classList.remove('active');
+          
         }
 
         
@@ -55,15 +55,17 @@
                     fadeElem = $('.fadeonscroll');
                 
                 
-                documentEl.on('scroll', function() {
+                 documentEl.on('scroll', function() {
                     var currScrollPos = documentEl.scrollTop();
                     //iterate through the fadeElem which conatins all elements with the class .fadeonscroll
                     fadeElem.each(function() {
 
                         var $this = $(this),
                             elemOffsetTop = $this.offset().top;
-                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/100);
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/300);
                     }); 
                 });
                 
             });
+
+    
